@@ -1,0 +1,28 @@
+#top {
+	margin-bottom: 25px;
+}
+
+#left {
+	border: 1px #000000 solid;
+	width: 750px;
+	height: 500px;
+	float: left;
+	overflow-y: auto;
+	display: inline-block;
+}
+
+#right {
+	border: 1px #000000 solid;
+	width: 250px;
+	height: 500px;
+	overflow-y: auto;
+	display: inline-block;
+}
+
+#loader  {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #f0f0f0;
+    z-index: 99999 !important;
+}
