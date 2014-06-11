@@ -22,25 +22,25 @@ import de.jughb.shoppingcart.services.ArticleService;
 @RunWith(MockitoJUnitRunner.class)
 public class StandardArticleControllerTest {
 
-	@InjectMocks
-	private StandardArticleController articleController;
-	@Mock
-	private ArticleService articleService;
-	
-	
-	@Before
-	public void setUp() {
-		Article article = new Article(new UID().toString(), "Telefon 4711", "Ein supergeiles Telefon", 299.99);
-		when(articleService.provideArticles("Telefon 4711")).thenReturn(Arrays.asList(article));
-	}
-	
-	
-	@Test
-	public void testSearchForArticles() throws Exception {
-		articleController.setSearchValue("Telefon 4711");
-		articleController.searchArticles();
-		
-		assertThat(articleController.getSearchValue(), is("Telefon 4711"));
-		assertThat(articleController.getFoundArticles(), hasSize(1));
-	}
+    @InjectMocks
+    private StandardArticleController articleController;
+    @Mock
+    private ArticleService articleService;
+    
+    
+    @Before
+    public void setUp() {
+        Article article = new Article(new UID().toString(), "Telefon 4711", "Ein supergeiles Telefon", 299.99);
+        when(articleService.provideArticles("Telefon 4711")).thenReturn(Arrays.asList(article));
+    }
+    
+    
+    @Test
+    public void testSearchForArticles() throws Exception {
+        articleController.setSearchValue("Telefon 4711");
+        articleController.searchArticles();
+        
+        assertThat(articleController.getSearchValue(), is("Telefon 4711"));
+        assertThat(articleController.getFoundArticles(), hasSize(1));
+    }
 }

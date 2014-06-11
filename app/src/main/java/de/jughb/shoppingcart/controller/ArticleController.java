@@ -5,11 +5,12 @@ import java.util.List;
 import de.jughb.shoppingcart.model.Article;
 
 public interface ArticleController {
-	void searchArticles();
-	
-	String getSearchValue();
 
-	void setSearchValue(String searchValue);
+    void searchArticles();
+    
+    String getSearchValue();
 
-	List<Article> getFoundArticles();
+    void setSearchValue(String searchValue);
+
+    List<Article> getFoundArticles();
 }

@@ -15,13 +15,13 @@ import cucumber.api.Scenario;
 import cucumber.api.java.After;
 
 public class WebDriverHolder {
-	
-	private static WebDriver driver;
-	
-	
-	public static WebDriver getDriver() {
-		if(driver == null) {
-			String remoteSeleniumServer = getSystemPropertyValue("selenium.remote.server", null);
+    
+    private static WebDriver driver;
+    
+    
+    public static WebDriver getDriver() {
+        if(driver == null) {
+            String remoteSeleniumServer = getSystemPropertyValue("selenium.remote.server", null);
             int remoteSeleniumPort = Integer.valueOf(getSystemPropertyValue("selenium.remote.port", "4444")).intValue();
             
             if(remoteSeleniumServer == null) {
@@ -33,13 +33,13 @@ public class WebDriverHolder {
                     throw new RuntimeException(e);
                 }
             }
-		}
-		
-		return driver;
-	}
-	
-	
-	private static String getSystemPropertyValue(String key, String defaultValue) {
+        }
+        
+        return driver;
+    }
+    
+    
+    private static String getSystemPropertyValue(String key, String defaultValue) {
         String value = System.getProperty(key);
         if(value == null) {
             return defaultValue;
@@ -47,8 +47,8 @@ public class WebDriverHolder {
         return value;
     }
 
-	
-	@After(order = 1)
+    
+    @After(order = 1)
     public static void resetDriver() {
         if(driver != null) {
             driver.quit();

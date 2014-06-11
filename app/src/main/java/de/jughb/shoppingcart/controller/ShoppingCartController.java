@@ -6,11 +6,11 @@ import de.jughb.shoppingcart.model.Article;
 
 public interface ShoppingCartController {
 
-	void addArticle(Article article);
-	
-	
-	List<Article> getArticles();
-	
-	
-	double getTotalPrice();
+    void addArticle(Article article);
+    
+    
+    List<Article> getArticles();
+    
+    
+    double getTotalPrice();
 }

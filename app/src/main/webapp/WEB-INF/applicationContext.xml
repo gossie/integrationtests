@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:util="http://www.springframework.org/schema/util"
-	xmlns:aop="http://www.springframework.org/schema/aop"
-	xmlns:cdi="http://www.jboss.org/schema/seam/spring"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-		                   http://www.springframework.org/schema/beans/spring-beans.xsd 
-		                   http://www.springframework.org/schema/context 
-		                   http://www.springframework.org/schema/context/spring-context-3.0.xsd
-   		                   http://www.springframework.org/schema/aop
-		                   http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
-		                   http://www.springframework.org/schema/util 
-		                   http://www.springframework.org/schema/util/spring-util-3.0.xsd
-		                   http://www.jboss.org/schema/seam/spring
-		                   http://www.jboss.org/schema/seam/spring/seam-spring.xsd">
-						   
-	<context:annotation-config />
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:cdi="http://www.jboss.org/schema/seam/spring"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd 
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                              http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+                           http://www.springframework.org/schema/util 
+                           http://www.springframework.org/schema/util/spring-util-3.0.xsd
+                           http://www.jboss.org/schema/seam/spring
+                           http://www.jboss.org/schema/seam/spring/seam-spring.xsd">
+                           
+    <context:annotation-config />
 
-	<bean id="articleController" class="de.jughb.shoppingcart.controller.impl.StandardArticleController" scope="session" />
-	<bean id="articleService" class="de.jughb.shoppingcart.services.impl.StandardArticleService" scope="singleton" init-method="init" />
-	
-	<bean id="shoppingCartController" class="de.jughb.shoppingcart.controller.impl.StandardShoppingCartController" scope="session" />
+    <bean id="articleController" class="de.jughb.shoppingcart.controller.impl.StandardArticleController" scope="session" />
+    <bean id="articleService" class="de.jughb.shoppingcart.services.impl.StandardArticleService" scope="singleton" init-method="init" />
+    
+    <bean id="shoppingCartController" class="de.jughb.shoppingcart.controller.impl.StandardShoppingCartController" scope="session" />
 </beans>
